@@ -8,6 +8,6 @@ cart.forEach(item => {
 function checkout() {
   localStorage.setItem("orders", JSON.stringify(cart));
   localStorage.removeItem("cart");
-  alert("Payment Successful (Demo)");
+  alert("Payment successful (demo)");
   window.location.href = "orders.html";
 }
