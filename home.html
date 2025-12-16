@@ -6,12 +6,16 @@
 </head>
 <body>
 
-<h2 style="text-align:center;">Products</h2>
-<input id="search" placeholder="Search" onkeyup="search()">
+<header class="topbar">
+  <h2>ShopEasy</h2>
+  <a href="cart.html">🛒 Cart</a>
+</header>
 
-<div id="products"></div>
+<div class="container">
+  <input id="search" class="search" placeholder="Search products..." onkeyup="search()">
 
-<a href="cart.html">Go to Cart</a>
+  <div id="products" class="grid"></div>
+</div>
 
 <script src="js/products.js"></script>
 </body>
