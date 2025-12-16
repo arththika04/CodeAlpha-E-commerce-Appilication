@@ -1,72 +1,62 @@
-body {
-  margin: 0;
+/* LOGIN PAGE */
+.login-body {
+  background: #fff;
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
 }
 
-/* Top Bar */
-.topbar {
-  background: #ff6f00;
-  color: white;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topbar a {
-  color: white;
-  text-decoration: none;
+.logo {
+  text-align: center;
+  font-size: 32px;
   font-weight: bold;
+  margin-top: 30px;
 }
 
-/* Page Container */
-.container {
-  padding: 15px;
-}
-
-/* Search */
-.search {
-  width: 100%;
-  padding: 10px;
+.login-box {
+  width: 350px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  padding: 20px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+}
+
+.login-box h2 {
   margin-bottom: 15px;
 }
 
-/* Product Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-}
-
-/* Product Card */
-.product {
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.product h4 {
-  margin: 5px 0;
+.login-box label {
   font-size: 14px;
-}
-
-.product p {
-  color: green;
   font-weight: bold;
 }
 
-/* Button */
-.product button {
-  background: #ff6f00;
-  color: white;
-  border: none;
-  padding: 8px;
+.login-box input {
   width: 100%;
-  border-radius: 5px;
+  padding: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 3px;
   cursor: pointer;
+}
+
+.login-box .help {
+  font-size: 13px;
+  color: #0066c0;
+  cursor: pointer;
+}
+
+.login-box .new {
+  text-align: center;
+  color: #555;
+}
+
+.login-box .create {
+  background: #e7e9ec;
+  border: 1px solid #adb1b8;
 }
