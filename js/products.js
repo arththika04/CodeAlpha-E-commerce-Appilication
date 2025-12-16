@@ -1,29 +1,33 @@
+let allProducts = [];
+
 fetch("data/products.json")
   .then(res => res.json())
   .then(data => {
-    window.products = data;
-    display(data);
+    allProducts = data;
+    show(data);
   });
 
-function display(items) {
+function show(products) {
   const div = document.getElementById("products");
   div.innerHTML = "";
-  items.forEach(p => {
+
+  products.forEach(p => {
     div.innerHTML += `
       <div class="product">
         <h4>${p.name}</h4>
         <p>$${p.price}</p>
-        <button onclick='addToCart(${JSON.stringify(p)})'>Add to Cart</button>
-      </div>`;
+        <button onclick='add(${JSON.stringify(p)})'>Add to Cart</button>
+      </div>
+    `;
   });
 }
 
-function searchProduct() {
+function search() {
   const q = document.getElementById("search").value.toLowerCase();
-  display(products.filter(p => p.name.toLowerCase().includes(q)));
+  show(allProducts.filter(p => p.name.toLowerCase().includes(q)));
 }
 
-function addToCart(product) {
+function add(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.push(product);
   localStorage.setItem("cart", JSON.stringify(cart));
