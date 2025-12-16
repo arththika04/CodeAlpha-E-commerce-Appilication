@@ -1,30 +1,25 @@
 function signup() {
-  const email = emailInput();
-  const password = passwordInput();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
   localStorage.setItem("user", JSON.stringify({ email, password }));
-  alert("Signup successful");
+  alert("Account created successfully");
 }
 
 function login() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (!user) {
-    alert("Please signup first");
+    alert("Please create an account first");
     return;
   }
 
-  if (user.email === emailInput() && user.password === passwordInput()) {
+  if (
+    user.email === document.getElementById("email").value &&
+    user.password === document.getElementById("password").value
+  ) {
     window.location.href = "home.html";
   } else {
-    alert("Invalid login");
+    alert("Invalid email or password");
   }
-}
-
-function emailInput() {
-  return document.getElementById("email").value;
-}
-
-function passwordInput() {
-  return document.getElementById("password").value;
 }
